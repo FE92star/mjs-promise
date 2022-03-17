@@ -1,14 +1,13 @@
 'use strict'
 
 /**
- * state内部有4种状态
+ * _state内部有4种状态
  * 0 - pending
- * 1 - fulfilled
- * 2 - rejected
+ * 1 - fulfilled(_value)
+ * 2 - rejected(_value)
  * 3 - 接收另外一个promise返回的状态(链式调用)
  */
-
-module.exports = Promise
+function noop () {}
 
 /**
  * Promise是一个构造函数
@@ -23,4 +22,11 @@ function Promise (excutor) {
   if (typeof fn !== 'function') {
     throw new TypeError('Promise constructor is not a function')
   }
+
+  if (fn === noop) return
+
+  this._state = 0 // 初始化的状态
+  this._value = null // 传递的值
 }
+
+module.exports = Promise
