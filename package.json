@@ -1,8 +1,8 @@
 {
   "name": "mjs-promise",
   "version": "0.0.1",
-  "description": "to implement Promise of Promise A+ standard",
-  "main": "index.js",
+  "description": "to implement Promise of Promise/A+ standard",
+  "main": "dist/index.js",
   "scripts": {
     "test": "yarn test"
   },
@@ -10,5 +10,8 @@
     "Promise"
   ],
   "author": "1737765939@qq.com",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "asap": "^2.0.6"
+  }
 }
