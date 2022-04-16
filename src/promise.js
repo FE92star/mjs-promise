@@ -45,6 +45,8 @@ function Promise (executor) {
 
 /**
  * 处理fulfilled状态
+ * @param {Object} promise-this
+ * @param {}
  */
 function resolve (promise, value) {
 
